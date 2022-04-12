@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { QueryClientProvider, QueryClient } from "react-query";
+import "./App.css";
+import { UserProfileCardProps } from "./component/UserProfileCard/UserProfileCard";
+import { UserProfileCards } from "./component/UserProfileCard/UserProfileCards";
 
+export const getUserProfileProps = (): UserProfileCardProps => ({
+  name: "Surendra Kumar",
+  username: "sksuri",
+  phone: "990909090",
+  email: "sk@gmail.com",
+  address: "bbsr",
+  image: "https://via.placeholder.com/600/771796",
+  website: "sk.com",
+});
 function App() {
+  const client = new QueryClient();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <QueryClientProvider client={client}>
+        {/* <UserProfileCard {...getUserProfileProps()} /> */}
+        <UserProfileCards />
+      </QueryClientProvider>
     </div>
   );
 }
