@@ -3,4 +3,4 @@
 This app main focus is to get the data with react query and add unit
 testing with react-testing library.
 
-![Alt text]('./public/code_coverage_expandableCard.png)
+![Code coverage screenshot](./public/code_coverage_expandableCard.png)
