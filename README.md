@@ -1,4 +1,4 @@
-# A simple react app to which will render a list of expandable card.
+# A simple react app which will render a list of expandable card.
 
 This app main focus is to get the data with react query and add unit
 testing with react-testing library.
